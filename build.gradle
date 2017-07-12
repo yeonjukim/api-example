@@ -27,5 +27,16 @@ dependencies {
 //    compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.apache.tomcat.embed:tomcat-embed-jasper')
     compile('javax.servlet:jstl:1.2')
+    compile('org.json:json')
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+task print{
+    doLast{
+        println "github push complete"
+    }
+}
+processResources{
+    filesMatching("**/application.yml"){
+        expand(project.properties)
+    }
 }
