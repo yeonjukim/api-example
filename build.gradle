@@ -33,6 +33,7 @@ dependencies {
 task print{
     doLast{
         println "github push complete"
+        println "test"
     }
 }
 processResources{
